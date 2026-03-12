@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Demo Catalogo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/public/main.css">
+    <link rel="stylesheet" href="src/public/modules/store/categories-page/categories-page.css">
+    <link rel="stylesheet" href="src/public/modules/layout/bottom-nav/bottom-nav.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="cat-page-header">
+        <a href="index.html" class="back-btn" aria-label="Volver">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        <h1>Categorías</h1>
+    </header>
+
+    <!-- CONTENT -->
+    <main id="app-content" class="cat-page-main">
+        <div id="full-categories-grid" class="full-categories-grid">
+            <!-- Renderizado dinámico desde JS -->
+            <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px;">
+                <div class="spinner" style="margin: 0 auto;"></div>
+            </div>
+        </div>
+        <div style="height: 80px;"></div>
+    </main>
+
+
+
+    <!-- El Bottom Nav se inyecta dinámicamente desde categories-page.js llamando a initBottomNav() -->
+
+
+    <script type="module" src="src/public/modules/store/categories-page/categories-page.js"></script>
+</body>
+
+</html>

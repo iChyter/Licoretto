@@ -1,0 +1,222 @@
+/* src/admin/auth/auth.css */
+
+/* Contenedor Principal (Fondo Blanco total) */
+body {
+    background-color: #ffffff;
+    margin: 0;
+}
+
+#auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: var(--font-family, sans-serif);
+}
+
+.auth-header {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.back-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.back-btn:active {
+    background-color: #e9ecef;
+}
+
+.back-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Tarjeta de Login */
+.auth-card {
+    background-color: transparent;
+    padding: 80px 20px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 440px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Icono Superior (Estrella 4 puntas) */
+.auth-icon {
+    margin-bottom: 20px;
+}
+
+.auth-icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* Títulos */
+.auth-title {
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+    color: #888;
+    margin: 0 0 35px 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Estilos del Formulario */
+.auth-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0a0a0;
+}
+
+.input-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 18px 48px;
+    /* Espacio para los iconos laterales */
+    background-color: #f8f9fa;
+    /* Gris muy clarito */
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #495057;
+    outline: none;
+    transition: all 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.auth-form input::placeholder {
+    color: #999;
+}
+
+.auth-form input:focus {
+    background-color: #ffffff;
+    border-color: #16a34a;
+}
+
+.auth-form input:focus+.input-icon,
+.input-wrapper:focus-within .input-icon {
+    color: #16a34a;
+}
+
+.input-action {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.input-action svg {
+    width: 20px;
+    height: 20px;
+    transition: color 0.2s;
+}
+
+.input-action:hover svg {
+    color: #1a1a1a;
+}
+
+/* Botón Principal (Login) */
+#login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #16a34a;
+    /* Verde */
+    color: #ffffff;
+    /* Texto blanco */
+    font-size: 1.1rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s, background-color 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+    /* Sombra verde */
+}
+
+#login-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(22, 163, 74, 0.3);
+}
+
+#login-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
+}
+
+#login-btn:disabled {
+    background-color: #86efac;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Mensaje de Error */
+.error-msg {
+    color: #dc3545;
+    background-color: #fff5f5;
+    border: 1px solid #ffc9c9;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 40px 15px;
+        /* Aprovechar todo el ancho en móviles */
+    }
+
+    .auth-title {
+        font-size: 1.6rem;
+    }
+}
